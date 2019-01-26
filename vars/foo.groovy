@@ -1,7 +1,7 @@
-@Grab(group='sie.kamaji', module='jenkins-test', version='1.0.2')
-import SomeLibrary
-def call(){
-  def s = SomeLibrary.getStatus("test status")
-  return s
+@Grab('org.apache.commons:commons-math3:3.4.1')
+import org.apache.commons.math3.primes.Primes
+void parallelize(int count) {
+  if (!Primes.isPrime(count)) {
+    error "${count} was not prime"
+  }
 }
-
